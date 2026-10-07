@@ -1,0 +1,3559 @@
+```css
+/* =====================================================
+   ELARA ROYAL RESORT
+   MAIN STYLESHEET
+   ===================================================== */
+
+
+/* ================= GLOBAL RESET ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222;
+    background: #f8f6f1;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+button,
+input,
+select {
+    font: inherit;
+}
+
+
+/* ================= HEADER ================= */
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 6%;
+
+    z-index: 100;
+
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.18);
+    backdrop-filter: blur(6px);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+
+/* ================= LOGO ================= */
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.logo h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 30px;
+    letter-spacing: 5px;
+    font-weight: 500;
+}
+
+.logo span {
+    font-size: 9px;
+    letter-spacing: 4px;
+    margin-top: 7px;
+    text-align: center;
+}
+
+
+/* ================= NAVIGATION ================= */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.navbar a {
+    position: relative;
+
+    font-size: 13px;
+    letter-spacing: 1px;
+
+    transition: 0.3s ease;
+}
+
+.navbar a::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+
+    width: 0;
+    height: 2px;
+
+    background: #d6b36a;
+
+    transition: 0.3s ease;
+}
+
+.navbar a:hover::after,
+.navbar a.active::after {
+    width: 100%;
+}
+
+.navbar a:hover {
+    color: #d6b36a;
+}
+
+
+/* ================= BOOK BUTTON ================= */
+
+.book-btn {
+    padding: 13px 25px;
+
+    border: 1px solid #d6b36a;
+
+    color: #ffffff;
+
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+
+    transition: 0.3s ease;
+}
+
+.book-btn:hover {
+    background: #d6b36a;
+    color: #111;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    position: relative;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.48),
+            rgba(0, 0, 0, 0.52)
+        ),
+        url("../images/hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-content {
+    max-width: 900px;
+
+    padding: 160px 30px 120px;
+
+    color: #ffffff;
+
+    animation: heroFade 1.2s ease;
+}
+
+@keyframes heroFade {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.welcome-text {
+    color: #d6b36a;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(45px, 7vw, 88px);
+
+    font-weight: 400;
+
+    letter-spacing: 6px;
+
+    line-height: 1.05;
+
+    margin-bottom: 20px;
+}
+
+.tagline {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 25px;
+
+    font-style: italic;
+
+    color: #e6c987;
+
+    margin-bottom: 25px;
+}
+
+.hero-description {
+    max-width: 650px;
+
+    margin: 0 auto 35px;
+
+    font-size: 16px;
+
+    color: rgba(255, 255, 255, 0.88);
+}
+
+
+/* ================= HERO BUTTONS ================= */
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+.primary-btn,
+.secondary-btn {
+    display: inline-block;
+
+    padding: 15px 30px;
+
+    font-size: 12px;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+    transition: 0.3s ease;
+}
+
+.primary-btn {
+    background: #d6b36a;
+    color: #111;
+}
+
+.primary-btn:hover {
+    background: #ffffff;
+    transform: translateY(-2px);
+}
+
+.secondary-btn {
+    border: 1px solid rgba(255, 255, 255, 0.7);
+
+    color: #ffffff;
+}
+
+.secondary-btn:hover {
+    background: #ffffff;
+    color: #111;
+}
+
+
+/* ================= BOOKING SECTION ================= */
+
+.booking-section {
+    position: relative;
+
+    margin-top: -60px;
+
+    padding: 0 6%;
+
+    z-index: 20;
+}
+
+.booking-box {
+    max-width: 1150px;
+
+    margin: auto;
+
+    background: #ffffff;
+
+    padding: 25px 30px;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr 1fr auto;
+
+    gap: 20px;
+
+    align-items: end;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.booking-item {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.booking-item label {
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    font-weight: bold;
+
+    color: #777;
+}
+
+.booking-item input,
+.booking-item select {
+    width: 100%;
+
+    border: none;
+
+    border-bottom: 1px solid #ccc;
+
+    padding: 10px 3px;
+
+    background: transparent;
+
+    outline: none;
+
+   
+```
+/* ================= INNER PAGE HERO ================= */
+
+.page-hero {
+    min-height: 55vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 150px 20px 80px;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.55)
+        ),
+        url("../images/hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.page-hero-content {
+    max-width: 750px;
+}
+
+.page-hero-content h1 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(45px, 6vw, 75px);
+
+    font-weight: 400;
+
+    margin-bottom: 20px;
+}
+
+.page-hero-content p:last-child {
+    color: rgba(255, 255, 255, 0.85);
+
+    font-size: 16px;
+}
+
+.room-details {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    padding: 15px 0;
+
+    border-top: 1px solid #eee;
+}
+
+.room-details span {
+    font-size: 11px;
+
+    color: #777;
+}
+/* ================= ROOM IMAGES ================= */
+
+.room-image {
+    height: 320px;
+
+    background-image: url("../images/deluxe-room.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: flex-end;
+
+    padding: 25px;
+}
+
+.room-two {
+    background-image: url("../images/executive-room.jpg");
+}
+
+.room-three {
+    background-image: url("../images/royal-suite.jpg");
+}
+
+
+/* ================= ROOM CARD ================= */
+
+.rooms-section {
+    padding: 100px 6%;
+}
+
+.rooms-container {
+    max-width: 1200px;
+    margin: 50px auto 0;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+}
+
+.room-card {
+    background: #ffffff;
+
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+
+    overflow: hidden;
+
+    transition: 0.3s ease;
+}
+
+.room-card:hover {
+    transform: translateY(-8px);
+}
+
+.room-image span {
+    background: #d6b36a;
+
+    color: #111;
+
+    padding: 8px 14px;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    font-weight: bold;
+}
+
+.room-info {
+    padding: 25px;
+}
+
+.room-info h3 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 25px;
+
+    font-weight: 400;
+
+    margin-bottom: 12px;
+}
+
+.room-info p {
+    color: #666;
+
+    font-size: 14px;
+
+    margin-bottom: 15px;
+}
+
+.room-bottom {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding-top: 15px;
+
+    border-top: 1px solid #eee;
+}
+
+.room-bottom span {
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+.room-bottom a {
+    color: #b08a3c;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+
+/* ================= ROOM PAGE MOBILE ================= */
+
+@media (max-width: 900px) {
+
+    .rooms-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .rooms-container {
+        grid-template-columns: 1fr;
+    }
+
+    .room-image {
+        height: 280px;
+    }
+
+    .room-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}.room-image {
+    height: 320px;
+    position: relative;
+    overflow: hidden;
+}
+
+.room-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.room-image span {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+
+    background: #d6b36a;
+    color: #111;
+
+    padding: 8px 14px;
+
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}```css
+/* =====================================================
+   ELARA ROYAL RESORT
+   ROOM CARD STYLING
+   ===================================================== */
+
+
+/* ROOM IMAGE */
+
+.room-image {
+    height: 320px;
+    position: relative;
+    overflow: hidden;
+}
+
+.room-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+
+/* IMAGE HOVER */
+
+.room-card:hover .room-image img {
+    transform: scale(1.05);
+}
+
+
+/* ROOM LABEL */
+
+.room-image span {
+    position: absolute;
+
+    bottom: 20px;
+    left: 20px;
+
+    background: #d6b36a;
+    color: #111;
+
+    padding: 8px 14px;
+
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+
+/* ROOM CARDS */
+
+.rooms-container {
+    max-width: 1200px;
+    margin: 50px auto 0;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+}
+
+
+.room-card {
+    background: #ffffff;
+
+    overflow: hidden;
+
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.room-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.12);
+}
+
+
+/* ROOM INFORMATION */
+
+.room-info {
+    padding: 25px;
+}
+
+
+.room-info h3 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 25px;
+    font-weight: 400;
+
+    margin-bottom: 12px;
+}
+
+
+.room-info p {
+    color: #666;
+
+    font-size: 14px;
+
+    margin-bottom: 15px;
+}
+
+
+/* ROOM DETAILS */
+
+.room-details {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    padding: 15px 0;
+
+    border-top: 1px solid #eee;
+}
+
+
+.room-details span {
+    font-size: 11px;
+    color: #777;
+}
+
+
+/* ROOM FEATURES */
+
+.room-features {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin: 15px 0;
+}
+
+
+.room-features span {
+    background: #f3f1eb;
+
+    padding: 6px 10px;
+
+    font-size: 10px;
+
+    color: #666;
+}
+
+
+/* ROOM BOTTOM */
+
+.room-bottom {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding-top: 15px;
+
+    border-top: 1px solid #eee;
+}
+
+
+/* PRICE */
+
+.room-price {
+    display: flex;
+
+    align-items: baseline;
+
+    gap: 4px;
+}
+
+
+.room-price strong {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 24px;
+
+    color: #222;
+}
+
+
+.room-price small {
+    font-size: 11px;
+
+    color: #777;
+}
+
+
+/* BOOK NOW BUTTON */
+
+.room-btn {
+    display: inline-block;
+
+    padding: 11px 18px;
+
+    background: #b08a3c;
+
+    color: #ffffff;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    transition: 0.3s ease;
+}
+
+
+.room-btn:hover {
+    background: #111;
+
+    color: #ffffff;
+}
+
+
+/* ROOMS SECTION */
+
+.rooms-section {
+    padding: 100px 6%;
+}
+
+
+/* MOBILE / TABLET */
+
+@media (max-width: 900px) {
+
+    .rooms-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .rooms-container {
+        grid-template-columns: 1fr;
+    }
+
+    .room-image {
+        height: 280px;
+    }
+
+    .room-bottom {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+}
+```
+```css
+/* =====================================================
+   BOOKING PAGE
+   ===================================================== */
+
+.booking-section {
+    padding: 100px 6%;
+    background: #f8f6f1;
+}
+
+.booking-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+
+/* BOOKING INTRO */
+
+.booking-intro {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 60px;
+}
+
+.booking-intro > span {
+    color: #b08a3c;
+    font-size: 11px;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.booking-intro h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 42px;
+    font-weight: 400;
+    margin: 12px 0 18px;
+}
+
+.booking-intro p {
+    color: #666;
+    font-size: 15px;
+}
+
+
+/* BOOKING FORM */
+
+.booking-form {
+    background: #ffffff;
+    padding: 50px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.08);
+}
+
+
+/* FORM SECTION */
+
+.form-section {
+    margin-bottom: 45px;
+}
+
+.form-section h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: #222;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #e5e2db;
+}
+
+
+/* FORM GRID */
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+
+/* FORM GROUP */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+
+/* INPUTS */
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 14px 15px;
+
+    border: 1px solid #ddd8cd;
+
+    background: #faf9f6;
+
+    color: #333;
+
+    font-size: 13px;
+
+    outline: none;
+
+    transition: 0.3s ease;
+}
+
+
+/* FOCUS */
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #b08a3c;
+
+    background: #ffffff;
+
+    box-shadow: 0 0 0 3px rgba(176, 138, 60, 0.08);
+}
+
+
+/* TEXTAREA */
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+
+/* BOOKING SUBMIT */
+
+.booking-submit {
+    text-align: center;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #e5e2db;
+}
+
+
+.booking-submit-btn {
+    border: none;
+
+    background: #b08a3c;
+
+    color: #ffffff;
+
+    padding: 16px 35px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+
+.booking-submit-btn:hover {
+    background: #111;
+}
+
+
+.booking-submit p {
+    margin-top: 15px;
+
+    color: #888;
+
+    font-size: 11px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .booking-section {
+        padding: 70px 5%;
+    }
+
+    .booking-form {
+        padding: 30px 20px;
+    }
+
+    .booking-intro h2 {
+        font-size: 34px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+}
+```
+/* =========================================================
+   ELARA ROYAL RESORT - HOME PAGE ENHANCEMENTS
+   ========================================================= */
+
+
+/* ================= HERO CONTENT ================= */
+
+.hero-content {
+    max-width: 850px;
+    padding: 120px 20px 60px;
+    color: #fff;
+    text-align: center;
+}
+
+.hero-subtitle {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #d6b36a;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+.hero-content h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(50px, 7vw, 88px);
+    line-height: 1.05;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+.hero-content p {
+    max-width: 650px;
+    margin: 0 auto 35px;
+    color: rgba(255,255,255,.88);
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* ================= HERO BUTTONS ================= */
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.hero-btn {
+    display: inline-block;
+    padding: 15px 28px;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: .3s ease;
+}
+
+.hero-btn.primary {
+    background: #d6b36a;
+    color: #111;
+}
+
+.hero-btn.primary:hover {
+    background: #fff;
+}
+
+.hero-btn.secondary {
+    border: 1px solid rgba(255,255,255,.7);
+    color: #fff;
+}
+
+.hero-btn.secondary:hover {
+    background: #fff;
+    color: #111;
+}
+
+
+/* ================= WELCOME SECTION ================= */
+
+.welcome-section {
+    padding: 110px 6%;
+    background: #f8f6f1;
+}
+
+.welcome-container {
+    max-width: 1150px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+
+    align-items: center;
+}
+
+.welcome-image {
+    position: relative;
+}
+
+.welcome-image::after {
+    content: "";
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #d6b36a;
+    z-index: 0;
+}
+
+.welcome-image img {
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+    height: 520px;
+
+    object-fit: cover;
+}
+
+.welcome-content {
+    padding: 20px 0;
+}
+
+.section-label {
+    display: block;
+    margin-bottom: 15px;
+
+    color: #b08a3c;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.welcome-content h2 {
+    max-width: 500px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 45px;
+    line-height: 1.2;
+    font-weight: 400;
+
+    margin-bottom: 25px;
+}
+
+.welcome-content p {
+    max-width: 550px;
+
+    color: #666;
+    font-size: 14px;
+    line-height: 1.9;
+
+    margin-bottom: 18px;
+}
+
+.text-link {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    color: #b08a3c;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+
+    transition: .3s ease;
+}
+
+.text-link:hover {
+    color: #111;
+}
+
+
+/* ================= HOME ROOMS ================= */
+
+.home-rooms {
+    padding: 110px 6%;
+    background: #fff;
+}
+
+.section-heading {
+    max-width: 700px;
+    margin: 0 auto 55px;
+
+    text-align: center;
+}
+
+.section-heading > span {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: #b08a3c;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.section-heading h2 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 45px;
+    line-height: 1.2;
+    font-weight: 400;
+
+    margin-bottom: 18px;
+}
+
+.section-heading p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* ================= FEATURED ROOMS ================= */
+
+.featured-rooms {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.featured-room-card {
+    background: #f8f6f1;
+
+    box-shadow: 0 10px 35px rgba(0,0,0,.07);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+
+    overflow: hidden;
+}
+
+.featured-room-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 18px 45px rgba(0,0,0,.12);
+}
+
+
+/* ================= FEATURED ROOM IMAGE ================= */
+
+.featured-room-image {
+    height: 300px;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.featured-room-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform .6s ease;
+}
+
+.featured-room-card:hover .featured-room-image img {
+    transform: scale(1.06);
+}
+
+.featured-room-image span {
+    position: absolute;
+
+    bottom: 18px;
+    left: 18px;
+
+    background: #d6b36a;
+    color: #111;
+
+    padding: 8px 13px;
+
+    font-size: 9px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+
+/* ================= FEATURED ROOM INFO ================= */
+
+.featured-room-info {
+    padding: 25px;
+}
+
+.featured-room-info h3 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 25px;
+    font-weight: 400;
+
+    margin-bottom: 12px;
+}
+
+.featured-room-info p {
+    color: #666;
+
+    font-size: 13px;
+    line-height: 1.7;
+
+    margin-bottom: 20px;
+}
+
+.featured-room-bottom {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding-top: 18px;
+
+    border-top: 1px solid #e2dfd7;
+}
+
+.featured-room-bottom strong {
+    font-family: Georgia, "Times New Roman", serif;
+
+    color: #222;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.featured-room-bottom strong small {
+    color: #777;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 10px;
+}
+
+.featured-room-bottom a {
+    padding: 11px 17px;
+
+    background: #b08a3c;
+    color: #fff;
+
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    transition: .3s ease;
+}
+
+.featured-room-bottom a:hover {
+    background: #111;
+}
+
+
+/* ================= VIEW ALL ROOMS ================= */
+
+.rooms-view-all {
+    text-align: center;
+
+    margin-top: 50px;
+}
+
+.outline-btn {
+    display: inline-block;
+
+    padding: 14px 25px;
+
+    border: 1px solid #b08a3c;
+
+    color: #b08a3c;
+
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+    transition: .3s ease;
+}
+
+.outline-btn:hover {
+    background: #b08a3c;
+    color: #fff;
+}
+
+
+/* ================= EXPERIENCES ================= */
+
+.experiences-section {
+    padding: 110px 6%;
+
+    background: #f1eee6;
+}
+
+.experience-grid {
+    max-width: 1150px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    border-top: 1px solid #d8d3c8;
+}
+
+.experience-card {
+    padding: 40px 35px;
+
+    border-right: 1px solid #d8d3c8;
+
+    transition: background .3s ease;
+}
+
+.experience-card:first-child {
+    border-left: 1px solid #d8d3c8;
+}
+
+.experience-card:hover {
+    background: rgba(255,255,255,.45);
+}
+
+.experience-number {
+    margin-bottom: 25px;
+
+    color: #b08a3c;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 15px;
+}
+
+.experience-card h3 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 25px;
+    font-weight: 400;
+
+    margin-bottom: 15px;
+}
+
+.experience-card p {
+    color: #666;
+
+    font-size: 13px;
+    line-height: 1.8;
+
+    margin-bottom: 20px;
+}
+
+.experience-card a {
+    color: #b08a3c;
+
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    transition: .3s ease;
+}
+
+.experience-card a:hover {
+    color: #111;
+}
+
+
+/* ================= HOME CTA ================= */
+
+.home-cta {
+    min-height: 500px;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,.58),
+            rgba(0,0,0,.62)
+        ),
+        url("../images/cta.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.home-cta-overlay {
+    width: 100%;
+}
+
+.home-cta-content {
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    padding: 70px 20px;
+
+    color: #fff;
+}
+
+.home-cta-content > span {
+    display: block;
+
+    margin-bottom: 18px;
+
+    color: #d6b36a;
+
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.home-cta-content h2 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 50px;
+    line-height: 1.2;
+    font-weight: 400;
+
+    margin-bottom: 20px;
+}
+
+.home-cta-content p {
+    max-width: 600px;
+
+    margin: 0 auto 30px;
+
+    color: rgba(255,255,255,.85);
+
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.cta-btn {
+    display: inline-block;
+
+    padding: 15px 30px;
+
+    background: #d6b36a;
+    color: #111;
+
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+    transition: .3s ease;
+}
+
+.cta-btn:hover {
+    background: #fff;
+}
+
+
+/* =========================================================
+   HOME PAGE RESPONSIVE DESIGN
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .welcome-container {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .welcome-image img {
+        height: 450px;
+    }
+
+    .featured-rooms {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .experience-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .experience-card {
+        border-left: 1px solid #d8d3c8;
+        border-bottom: 1px solid #d8d3c8;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .hero-content {
+        padding: 130px 20px 50px;
+    }
+
+    .hero-content h1 {
+        font-size: 48px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .hero-btn {
+        width: 220px;
+    }
+
+
+    .welcome-section,
+    .home-rooms,
+    .experiences-section {
+        padding: 75px 5%;
+    }
+
+    .welcome-image img {
+        height: 350px;
+    }
+
+    .welcome-image::after {
+        top: 15px;
+        left: 15px;
+    }
+
+    .welcome-content h2 {
+        font-size: 34px;
+    }
+
+
+    .section-heading h2 {
+        font-size: 35px;
+    }
+
+
+    .featured-rooms {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-room-image {
+        height: 280px;
+    }
+/* =========================================================
+   ELARA ROYAL RESORT - PREMIUM HEADER UPGRADE
+   ========================================================= */
+
+
+/* ---------- HEADER ---------- */
+
+.header {
+    height: 95px;
+    padding: 0 6%;
+
+    background: rgba(10, 28, 23, 0.82);
+
+    border-bottom: 1px solid rgba(214, 179, 106, 0.25);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    transition: all .3s ease;
+}
+
+
+/* ---------- LOGO ---------- */
+
+.logo {
+    display: flex;
+    flex-direction: column;
+
+    line-height: 1;
+
+    transition: .3s ease;
+}
+
+.logo:hover {
+    transform: translateY(-2px);
+}
+
+.logo h2 {
+    color: #fff;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 29px;
+    font-weight: 400;
+
+    letter-spacing: 5px;
+}
+
+.logo span {
+    color: #d6b36a;
+
+    font-size: 8px;
+    font-weight: 600;
+
+    letter-spacing: 4px;
+
+    margin-top: 8px;
+
+    text-align: center;
+}
+
+
+/* ---------- NAVIGATION ---------- */
+
+.navbar {
+    display: flex;
+    align-items: center;
+
+    gap: 28px;
+}
+
+.navbar a {
+    position: relative;
+
+    color: rgba(255,255,255,.9);
+
+    font-size: 11px;
+    font-weight: 500;
+
+    letter-spacing: 1.2px;
+
+    text-transform: uppercase;
+
+    transition: color .3s ease;
+}
+
+
+/* Gold line underneath links */
+
+.navbar a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: -9px;
+
+    width: 0;
+    height: 2px;
+
+    background: #d6b36a;
+
+    transform: translateX(-50%);
+
+    transition: width .3s ease;
+}
+
+.navbar a:hover {
+    color: #d6b36a;
+}
+
+.navbar a:hover::after,
+.navbar a.active::after {
+    width: 100%;
+}
+
+
+/* ---------- BOOK NOW BUTTON ---------- */
+
+.navbar .book-btn {
+    margin-left: 8px;
+
+    padding: 12px 22px;
+
+    border: 1px solid #d6b36a;
+
+    color: #d6b36a;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    letter-spacing: 1.5px;
+
+    transition: all .3s ease;
+}
+
+.navbar .book-btn::after {
+    display: none;
+}
+
+.navbar .book-btn:hover,
+.navbar .book-btn.active {
+    background: #d6b36a;
+    color: #111;
+}
+
+
+/* =========================================================
+   HEADER ON LIGHT PAGE HEROES
+   ========================================================= */
+
+/*
+   Keeps the navigation elegant over all hero sections.
+*/
+
+.page-hero .header {
+    background: transparent;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .header {
+        padding: 0 4%;
+    }
+
+    .navbar {
+        gap: 18px;
+    }
+
+    .navbar a {
+        font-size: 10px;
+    }
+
+    .logo h2 {
+        font-size: 25px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .header {
+        height: auto;
+        min-height: 120px;
+
+        padding: 18px 5%;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        gap: 18px;
+    }
+
+
+    .logo {
+        align-items: center;
+    }
+
+    .logo h2 {
+        font-size: 24px;
+        letter-spacing: 4px;
+    }
+
+    .logo span {
+        font-size: 7px;
+        letter-spacing: 3px;
+    }
+
+
+    .navbar {
+        width: 100%;
+
+        display: flex;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 12px 18px;
+    }
+
+    .navbar a {
+        font-size: 9px;
+
+        letter-spacing: 1px;
+    }
+
+    .navbar a::after {
+        bottom: -6px;
+    }
+
+
+    .navbar .book-btn {
+        margin-left: 0;
+
+        padding: 9px 15px;
+
+        font-size: 9px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 450px) {
+
+    .header {
+        min-height: 135px;
+
+        gap: 15px;
+    }
+
+    .logo h2 {
+        font-size: 21px;
+    }
+
+    .navbar {
+        gap: 10px 13px;
+    }
+
+    .navbar a {
+        font-size: 8px;
+    }
+
+    .navbar .book-btn {
+        padding: 8px 12px;
+    }
+
+}
+
+    .experience-card {
+        padding: 30px 25px;
+    }
+
+
+    .home-cta {
+        min-height: 450px;
+    }
+
+    .home-cta-content h2 {
+        font-size: 38px;
+    }
+
+}/* =========================================================
+   ELARA ROYAL RESORT - ABOUT PAGE
+   ========================================================= */
+
+
+/* ================= ABOUT HERO ================= */
+
+.about-hero {
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, .55),
+            rgba(0, 0, 0, .60)
+        ),
+        url("../images/about.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* ================= STORY SECTION ================= */
+
+.about-story {
+    padding: 110px 6%;
+    background: #f8f6f1;
+}
+
+.about-story-container {
+    max-width: 1150px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 75px;
+    align-items: center;
+}
+
+.about-story-image {
+    position: relative;
+}
+
+.about-story-image::after {
+    content: "";
+
+    position: absolute;
+
+    top: 25px;
+    left: 25px;
+
+    width: 100%;
+    height: 100%;
+
+    border: 1px solid #d6b36a;
+
+    z-index: 0;
+}
+
+.about-story-image img {
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+    height: 520px;
+
+    object-fit: cover;
+}
+
+.about-story-content {
+    padding: 10px 0;
+}
+
+.about-story-content h2 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 45px;
+    line-height: 1.2;
+    font-weight: 400;
+
+    margin-bottom: 25px;
+}
+
+.about-story-content p {
+    color: #666;
+
+    font-size: 14px;
+    line-height: 1.9;
+
+    margin-bottom: 18px;
+}
+
+
+/* ================= VALUES ================= */
+
+.values-section {
+    padding: 110px 6%;
+
+    background: #fff;
+}
+
+.values-grid {
+    max-width: 1150px;
+
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    border-top: 1px solid #ddd8cc;
+}
+
+.value-card {
+    padding: 45px 35px;
+
+    border-right: 1px solid #ddd8cc;
+
+    transition: all .3s ease;
+}
+
+.value-card:first-child {
+    border-left: 1px solid #ddd8cc;
+}
+
+.value-card:hover {
+    background: #f8f6f1;
+
+    transform: translateY(-5px);
+}
+
+.value-number {
+    color: #b08a3c;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 16px;
+
+    margin-bottom: 25px;
+}
+
+.value-card h3 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 25px;
+    font-weight: 400;
+
+    margin-bottom: 15px;
+}
+
+.value-card p {
+    color: #666;
+
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+
+/* ================= EXPERIENCE ================= */
+
+.about-experience {
+    padding: 110px 6%;
+
+    background: #f1eee6;
+}
+
+.about-experience-container {
+    max-width: 1150px;
+
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 75px;
+
+    align-items: center;
+}
+
+.about-experience-content h2 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 45px;
+    line-height: 1.2;
+    font-weight: 400;
+
+    margin-bottom: 25px;
+}
+
+.about-experience-content p {
+    max-width: 520px;
+
+    color: #666;
+
+    font-size: 14px;
+    line-height: 1.9;
+
+    margin-bottom: 18px;
+}
+
+.about-experience-image {
+    position: relative;
+
+    overflow: visible;
+}
+
+.about-experience-image::before {
+    content: "";
+
+    position: absolute;
+
+    top: -20px;
+    right: -20px;
+
+    width: 100%;
+    height: 100%;
+
+    border: 1px solid #d6b36a;
+
+    z-index: 0;
+}
+
+.about-experience-image img {
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+    height: 500px;
+
+    object-fit: cover;
+}
+
+
+/* ================= ABOUT CTA ================= */
+
+.about-story + .values-section {
+    border-top: 1px solid #eee;
+}
+
+
+/* ================= TABLET ================= */
+
+@media (max-width: 900px) {
+
+    .about-story-container {
+        grid-template-columns: 1fr;
+
+        gap: 55px;
+    }
+
+    .about-story-image img {
+        height: 450px;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .value-card {
+        border-left: 1px solid #ddd8cc;
+
+        border-bottom: 1px solid #ddd8cc;
+    }
+
+    .about-experience-container {
+        grid-template-columns: 1fr;
+
+        gap: 55px;
+    }
+
+    .about-experience-image img {
+        height: 450px;
+    }
+
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 600px) {
+
+    .about-story,
+    .values-section,
+    .about-experience {
+        padding: 75px 5%;
+    }
+
+    .about-story-content h2,
+    .about-experience-content h2 {
+        font-size: 34px;
+    }
+
+    .about-story-image img {
+        height: 350px;
+    }
+
+    .about-story-image::after {
+        top: 15px;
+        left: 15px;
+    }
+
+    .value-card {
+        padding: 35px 25px;
+    }
+
+    .about-experience-image img {
+        height: 350px;
+    }
+
+    .about-experience-image::before {
+        top: -12px;
+        right: -12px;
+    }
+
+}/* =========================================================
+   ELARA ROYAL RESORT - DINING PAGE
+   ========================================================= */
+
+
+/* ================= DINING HERO ================= */
+
+.dining-hero {
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, .55),
+            rgba(0, 0, 0, .62)
+        ),
+        url("../images/hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* ================= DINING INTRO ================= */
+
+.dining-intro {
+    padding: 110px 6%;
+    background: #f8f6f1;
+}
+
+.dining-intro-container {
+    max-width: 1150px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 75px;
+    align-items: center;
+}
+
+.dining-intro-content h2 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 45px;
+    line-height: 1.2;
+    font-weight: 400;
+
+    margin-bottom: 25px;
+}
+
+.dining-intro-content p {
+    max-width: 540px;
+
+    color: #666;
+
+    font-size: 14px;
+    line-height: 1.9;
+
+    margin-bottom: 18px;
+}
+
+.dining-intro-image {
+    position: relative;
+}
+
+.dining-intro-image::after {
+    content: "";
+
+    position: absolute;
+
+    top: 25px;
+    right: -25px;
+
+    width: 100%;
+    height: 100%;
+
+    border: 1px solid #d6b36a;
+
+    z-index: 0;
+}
+
+.dining-intro-image img {
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+    height: 500px;
+
+    object-fit: cover;
+}
+
+
+/* ================= DINING EXPERIENCES ================= */
+
+.dining-experiences {
+    padding: 110px 6%;
+    background: #fff;
+}
+
+.dining-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+}
+
+.dining-card {
+    background: #f8f6f1;
+
+    overflow: hidden;
+
+    box-shadow: 0 10px 35px rgba(0,0,0,.07);
+
+    transition: all .35s ease;
+}
+
+.dining-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 18px 45px rgba(0,0,0,.13);
+}
+
+
+/* ================= DINING CARD IMAGE ================= */
+
+.dining-card-image {
+    height: 280px;
+    overflow: hidden;
+}
+
+.dining-card-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform .6s ease;
+}
+
+.dining-card:hover .dining-card-image img {
+    transform: scale(1.07);
+}
+
+
+/* ================= DINING CARD CONTENT ================= */
+
+.dining-card-content {
+    padding: 30px;
+}
+
+.dining-card-content > span {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: #b08a3c;
+
+    font-size: 9px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.dining-card-content h3 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 27px;
+    font-weight: 400;
+
+    margin-bottom: 15px;
+}
+
+.dining-card-content p {
+    color: #666;
+
+    font-size: 13px;
+    line-height: 1.8;
+
+    margin-bottom: 20px;
+}
+
+.dining-time {
+    padding-top: 15px;
+
+    border-top: 1px solid #ddd8cc;
+
+    color: #777;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+
+/* ================= SIGNATURE MENU ================= */
+
+.menu-section {
+    padding: 110px 6%;
+
+    background: #f1eee6;
+}
+
+.menu-grid {
+    max-width: 950px;
+
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    column-gap: 70px;
+    row-gap: 0;
+}
+
+.menu-item {
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 25px;
+
+    padding: 28px 0;
+
+    border-bottom: 1px solid #d6d0c4;
+}
+
+.menu-item h3 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 20px;
+    font-weight: 400;
+
+    margin-bottom: 7px;
+}
+
+.menu-item p {
+    color: #777;
+
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.menu-item strong {
+    flex-shrink: 0;
+
+    color: #b08a3c;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 19px;
+    font-weight: 400;
+}
+
+
+/* ================= DINING CTA ================= */
+
+.dining-cta {
+    min-height: 500px;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,.58),
+            rgba(0,0,0,.63)
+        ),
+        url("../images/cta.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.dining-cta-overlay {
+    width: 100%;
+}
+
+.dining-cta-content {
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    padding: 70px 20px;
+
+    color: #fff;
+}
+
+.dining-cta-content > span {
+    display: block;
+
+    margin-bottom: 18px;
+
+    color: #d6b36a;
+
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.dining-cta-content h2 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 50px;
+    line-height: 1.2;
+    font-weight: 400;
+
+    margin-bottom: 20px;
+}
+
+.dining-cta-content p {
+    max-width: 580px;
+
+    margin: 0 auto 30px;
+
+    color: rgba(255,255,255,.85);
+
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* ================= TABLET ================= */
+
+@media (max-width: 900px) {
+
+    .dining-intro-container {
+        grid-template-columns: 1fr;
+        gap: 55px;
+    }
+
+    .dining-intro-image img {
+        height: 450px;
+    }
+
+    .dining-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .menu-grid {
+        column-gap: 40px;
+    }
+
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 600px) {
+
+    .dining-intro,
+    .dining-experiences,
+    .menu-section {
+        padding: 75px 5%;
+    }
+
+    .dining-intro-content h2 {
+        font-size: 34px;
+    }
+
+    .dining-intro-image img {
+        height: 350px;
+    }
+
+    .dining-intro-image::after {
+        top: 15px;
+        right: -15px;
+    }
+
+    .dining-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dining-card-image {
+        height: 260px;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dining-cta {
+        min-height: 450px;
+    }
+
+    .dining-cta-content h2 {
+        font-size: 38px;
+    }
+
+}/* =========================================================
+   ELARA ROYAL RESORT - GALLERY PAGE
+   ========================================================= */
+
+
+/* ================= GALLERY HERO ================= */
+
+.gallery-hero {
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, .55),
+            rgba(0, 0, 0, .62)
+        ),
+        url("../images/hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* ================= GALLERY INTRO ================= */
+
+.gallery-intro {
+    padding: 90px 6% 40px;
+    background: #f8f6f1;
+}
+
+
+/* ================= GALLERY SECTION ================= */
+
+.gallery-section {
+    padding: 30px 6% 110px;
+    background: #f8f6f1;
+}
+
+.gallery-grid {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    grid-auto-rows: 280px;
+
+    gap: 18px;
+}
+
+
+/* ================= GALLERY ITEMS ================= */
+
+.gallery-item {
+    position: relative;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    background: #111;
+}
+
+.gallery-item.gallery-large {
+    grid-row: span 2;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform .7s ease,
+        filter .5s ease;
+}
+
+
+/* ================= HOVER ================= */
+
+.gallery-item:hover img {
+    transform: scale(1.08);
+
+    filter: brightness(.65);
+}
+
+
+/* ================= OVERLAY ================= */
+
+.gallery-overlay {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    padding: 45px 25px 25px;
+
+    background:
+        linear-gradient(
+            transparent,
+            rgba(0,0,0,.85)
+        );
+
+    color: #fff;
+
+    transform: translateY(10px);
+
+    opacity: .9;
+
+    transition:
+        transform .4s ease,
+        opacity .4s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+    transform: translateY(0);
+
+    opacity: 1;
+}
+
+.gallery-overlay span {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #d6b36a;
+
+    font-size: 9px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+.gallery-overlay h3 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 24px;
+    font-weight: 400;
+}
+
+
+/* ================= GALLERY CTA ================= */
+
+.gallery-cta {
+    min-height: 500px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,.58),
+            rgba(0,0,0,.63)
+        ),
+        url("../images/cta.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.gallery-cta-overlay {
+    width: 100%;
+}
+
+.gallery-cta-content {
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    padding: 70px 20px;
+
+    color: #fff;
+}
+
+.gallery-cta-content > span {
+    display: block;
+
+    margin-bottom: 18px;
+
+    color: #d6b36a;
+
+    font-size: 10px;
+    font-weight: bold;
+
+    letter-spacing: 3px;
+}
+
+.gallery-cta-content h2 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 50px;
+
+    line-height: 1.2;
+
+    font-weight: 400;
+
+    margin-bottom: 20px;
+}
+
+.gallery-cta-content p {
+    max-width: 580px;
+
+    margin: 0 auto 30px;
+
+    color: rgba(255,255,255,.85);
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+
+        grid-auto-rows: 260px;
+    }
+
+    .gallery-item.gallery-large {
+        grid-row: span 2;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .gallery-intro {
+        padding: 70px 5% 25px;
+    }
+
+    .gallery-section {
+        padding: 25px 5% 75px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+
+        grid-auto-rows: 280px;
+
+        gap: 15px;
+    }
+
+    .gallery-item.gallery-large {
+        grid-row: span 1;
+    }
+
+    .gallery-overlay {
+        padding: 40px 20px 20px;
+    }
+
+    .gallery-overlay h3 {
+        font-size: 21px;
+    }
+
+    .gallery-cta {
+        min-height: 450px;
+    }
+
+    .gallery-cta-content h2 {
+        font-size: 38px;
+    }
+
+}/* =========================================
+   CONTACT PAGE
+   ========================================= */
+
+.contact-hero {
+    background:
+        linear-gradient(rgba(0, 0, 0, .58), rgba(0, 0, 0, .58)),
+        url("../images/hero.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+/* Contact Main Section */
+.contact-section {
+    padding: 100px 6%;
+    background: #f8f6f1;
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+}
+
+.contact-information {
+    padding-top: 10px;
+}
+
+.contact-information .section-label {
+    display: inline-block;
+    color: #b18b45;
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.contact-information h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 48px;
+    font-weight: 400;
+    color: #183d35;
+    margin-bottom: 20px;
+}
+
+.contact-information > p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.9;
+    max-width: 520px;
+    margin-bottom: 45px;
+}
+
+/* Contact Details */
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.contact-detail {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.contact-icon {
+    width: 45px;
+    height: 45px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #d6b36a;
+    color: #b18b45;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.contact-detail h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: #183d35;
+    margin-bottom: 5px;
+}
+
+.contact-detail p {
+    color: #777;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* Contact Form */
+.contact-form-container {
+    background: #fff;
+    padding: 45px;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, .08);
+    border-top: 3px solid #d6b36a;
+}
+
+.contact-form h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 30px;
+    font-weight: 400;
+    color: #183d35;
+    margin-bottom: 8px;
+}
+
+.contact-form-intro {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.contact-form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    color: #333;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    border: 1px solid #ddd;
+    background: #faf9f6;
+    padding: 14px 15px;
+    outline: none;
+    color: #333;
+    transition: .3s ease;
+}
+
+.contact-form input {
+    height: 48px;
+}
+
+.contact-form textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #d6b36a;
+    background: #fff;
+}
+
+.contact-submit {
+    width: 100%;
+    padding: 15px 25px;
+    border: 1px solid #d6b36a;
+    background: #183d35;
+    color: #fff;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.contact-submit:hover {
+    background: #d6b36a;
+    color: #111;
+}
+
+/* Location Section */
+.location-section {
+    padding: 100px 6%;
+    background: #fff;
+}
+
+.location-section .section-heading {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 45px;
+}
+
+.location-section .section-heading .section-label {
+    display: inline-block;
+    color: #b18b45;
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.location-section .section-heading h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 44px;
+    font-weight: 400;
+    color: #183d35;
+    margin-bottom: 12px;
+}
+
+.location-section .section-heading p {
+    color: #777;
+    font-size: 15px;
+}
+
+.location-box {
+    max-width: 1200px;
+    height: 400px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.location-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background:
+        linear-gradient(rgba(24, 61, 53, .88), rgba(24, 61, 53, .88)),
+        url("../images/about.jpg");
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+.location-placeholder span {
+    display: block;
+    color: #d6b36a;
+    font-size: 11px;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+.location-placeholder h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 38px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.location-placeholder p {
+    color: rgba(255, 255, 255, .8);
+    font-size: 14px;
+}
+
+/* Contact CTA */
+.contact-cta {
+    min-height: 420px;
+    position: relative;
+    background:
+        url("../images/cta.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.contact-cta-overlay {
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 20px;
+    background: rgba(0, 0, 0, .58);
+}
+
+.contact-cta-content {
+    max-width: 750px;
+    color: #fff;
+}
+
+.contact-cta-content > span {
+    display: block;
+    color: #d6b36a;
+    font-size: 11px;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+.contact-cta-content h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(36px, 5vw, 58px);
+    font-weight: 400;
+    margin-bottom: 18px;
+}
+
+.contact-cta-content p {
+    color: rgba(255, 255, 255, .85);
+    max-width: 600px;
+    margin: 0 auto 30px;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* Responsive Contact Page */
+@media (max-width: 900px) {
+
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .contact-information h2 {
+        font-size: 42px;
+    }
+
+    .contact-form-container {
+        padding: 35px;
+    }
+
+    .location-box {
+        height: 350px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .contact-section {
+        padding: 70px 5%;
+    }
+
+    .contact-information h2 {
+        font-size: 36px;
+    }
+
+    .contact-form-container {
+        padding: 25px;
+    }
+
+    .contact-form-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .location-section {
+        padding: 70px 5%;
+    }
+
+    .location-section .section-heading h2 {
+        font-size: 36px;
+    }
+
+    .location-box {
+        height: 300px;
+    }
+
+    .location-placeholder h3 {
+        font-size: 30px;
+    }
+
+    .contact-cta-overlay {
+        min-height: 380px;
+    }/* =========================================
+   ELARA WEBSITE ANIMATIONS
+   ========================================= */
+
+/* Hero slow zoom */
+.hero {
+    animation: heroZoom 12s ease-in-out infinite alternate;
+}
+
+@keyframes heroZoom {
+    from {
+        background-size: 100%;
+    }
+
+    to {
+        background-size: 110%;
+    }
+}
+
+
+/* Header entrance */
+.header {
+    animation: headerFade 1.2s ease forwards;
+}
+
+@keyframes headerFade {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Navigation entrance */
+.navbar a {
+    animation: navAppear 1s ease forwards;
+}
+
+@keyframes navAppear {
+    from {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Buttons */
+.book-btn,
+.cta-btn,
+.booking-submit-btn,
+.contact-submit {
+    transition: transform .3s ease, box-shadow .3s ease, background .3s ease;
+}
+
+.book-btn:hover,
+.cta-btn:hover,
+.booking-submit-btn:hover,
+.contact-submit:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .18);
+}
+
+
+/* Room cards */
+.room-card {
+    transition: transform .4s ease, box-shadow .4s ease;
+}
+
+.room-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, .15);
+}
+
+
+/* Room images */
+.room-card img {
+    transition: transform .6s ease;
+}
+
+.room-card:hover img {
+    transform: scale(1.06);
+}
+
+
+/* Gallery images */
+.gallery-item {
+    overflow: hidden;
+}
+
+.gallery-item img {
+    transition: transform .7s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.08);
+}
+
+
+/* Value cards */
+.value-card {
+    transition: transform .4s ease, box-shadow .4s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, .12);
+}
+
+
+/* Dining cards */
+.dining-card {
+    transition: transform .4s ease, box-shadow .4s ease;
+}
+
+.dining-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, .12);
+}
+/* =========================================
+   ELARA MOVING GOLD LOGO
+   ========================================= */
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.logo h2 {
+    display: inline-block;
+    position: relative;
+    color: #f4d58d;
+
+    animation:
+        elaraMove 4s ease-in-out infinite,
+        elaraGlow 2.5s ease-in-out infinite;
+
+    text-shadow:
+        0 0 5px rgba(244, 213, 141, 0.7),
+        0 0 12px rgba(214, 179, 106, 0.6),
+        0 0 20px rgba(214, 179, 106, 0.4);
+}
+
+
+/* =========================================
+   ELARA MOVEMENT
+   Right → Left → Right
+   ========================================= */
+
+@keyframes elaraMove {
+
+    0% {
+        transform: translateX(40px);
+    }
+
+    50% {
+        transform: translateX(-40px);
+    }
+
+    100% {
+        transform: translateX(40px);
+    }
+
+}
+
+
+/* =========================================
+   ELARA GOLD GLOW
+   ========================================= */
+
+@keyframes elaraGlow {
+
+    0%,
+    100% {
+        text-shadow:
+            0 0 5px rgba(244, 213, 141, 0.4),
+            0 0 10px rgba(214, 179, 106, 0.3);
+    }
+
+    50% {
+        text-shadow:
+            0 0 7px rgba(244, 213, 141, 0.9),
+            0 0 15px rgba(214, 179, 106, 0.8),
+            0 0 25px rgba(214, 179, 106, 0.5);
+    }
